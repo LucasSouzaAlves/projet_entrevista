@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
-error_reporting(E_ALL);
-
 class Maquina 
 {
 
@@ -151,12 +147,6 @@ public function listarMaquinas(){
     return $this->pdo->query($sql)->fetchAll();
  }
  
- public function bucarPorNome(){
-
-    $sql= "SELECT * FROM maquina where nome = $this->nome";
-    return $this->pdo->query($sql)->fetch();
- }
-
 } 
 
 ?>
